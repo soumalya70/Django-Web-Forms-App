@@ -1,0 +1,114 @@
+nav{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+a{
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.Icon{
+    font-size: 30px;
+    color: #7e22ce;
+    margin: 10px 470px 220px 20px ;
+}
+.para1{
+    margin: 20px;
+    color: blue;
+    font-size: 20px;
+    margin-left: 30px;
+}
+.quote{
+    margin: 20px;
+    font-size: 20px;
+    margin-left: 30px;
+}
+h2{
+    margin: 20px;
+    margin-left: 30px; 
+}
+.form{
+    padding: 0px 300px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: solid;
+    font-weight: 900;
+}
+
+.heading {
+    padding: 5px 5px;
+    background-color: rgb(128, 81, 248);
+    width: auto;
+    color: white;
+    line-height: 10%;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+form {
+    background-color: rgb(238, 239, 235);
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 0px 80px 5px;
+    font-size: large;
+}
+
+input[type="submit"] {
+    background-color: rgb(181, 74, 191);
+    font-size: larger;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 75%;
+}
+
+input[type="reset"] {
+    background-color: red;
+    font-size: larger;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(84, 25, 83);
+}
+
+input[type="reset"]:hover {
+    background-color: rgb(191, 0, 0);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+} 
+
+@media screen and (max-width: 768px) {
+    nav {
+        font-size: 18px;
+    }
+
+    .Icon {
+        margin: 10px 20px;
+    }
+
+    p {
+        margin-left: 10px;
+    }
+    .para1{
+        margin-left: 10px;
+    }
+    footer {
+        position: relative;
+    }
+}
