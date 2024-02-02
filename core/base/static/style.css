@@ -3,11 +3,12 @@ nav{
     font-weight: bold;
     font-size: 25px;
     margin-bottom: 30px;
+    /* position: fixed; */
 }
 a{
     margin: 20px;
     text-decoration: none;
-    color: black;
+    color: rgb(157, 51, 162);
 }
 
 .Icon{
@@ -35,6 +36,9 @@ h2{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration: solid;
     font-weight: 900;
+}
+.messages{
+    color: red;
 }
 
 .heading {
@@ -84,7 +88,7 @@ input[type="reset"]:hover {
 }
 
 footer {
-    background-color: #333;
+    background-color: #483f54;
     color: white;
     padding: 1em;
     text-align: center;
@@ -92,6 +96,39 @@ footer {
     bottom: 0;
     width: 100%;
 } 
+.mt-5{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.about {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
 
 @media screen and (max-width: 768px) {
     nav {
@@ -110,5 +147,17 @@ footer {
     }
     footer {
         position: relative;
+    }
+    th, td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        width: 50%;
     }
 }

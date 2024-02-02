@@ -1,27 +1,38 @@
 {% extends "base.html" %}
 {% block start %}
 <main>
-    <p class="para1">Welcome to your website! This is the main content area with some text.</p>
+    <p class="para1"> Welcome to your website! </p>
     <p class="para1">Current date and time: {{ current_time }}</p>
-    <h2>Random Quote</h2>
+    <h2>Daily Quote</h2>
     <p class="quote">"{{ random_quote }}"- {{author}}</p>
     <div class="heading">
         <h1>Contact Form</h1>
         <p id="Subheading">Please fill all the text in the fields.</p>
     </div>
     <div class= 'form'>
-    <form action="post">
+    <form action="{% url 'submit_form' %}" method="post">
 
+        {% csrf_token %}
+        {% if messages %}
+        <ul class="messages">
+            <div class='messages'>
+            {% for message in messages %}
+                <li {% if message.tags %} class="messages"{% endif %}>{{ message }}</li>
+            {% endfor %}
+            </div>
+        </ul>
+    {% endif %}
+    
         <p class="name">
             Your Name:<br>
-            <input type="text" placeholder="Your Full Name">
+            <input type="text" name='name' placeholder="Your Full Name">
         </p>
         <p class="email"> Your Email:<br>
             <input type="email" name="email" id="" placeholder="Enter your Email">
         </p>
         <p class="number">
             Your mobile number:<br>
-            <input type="text" placeholder="Enter your mobile number">
+            <input type="text" name='mobileno' placeholder="Enter your mobile number">
         </p>
         <p class="message">
             Your message to us:<br>
@@ -31,7 +42,7 @@
     </form>
     </div>
 
-    
+
 </main>
 
 {% endblock %}
