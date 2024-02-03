@@ -13,6 +13,8 @@ To run this application perform this following tasks:
 
 Activate virtual Environment: `env\Scripts\activate` 
 
+Install all required packages: `pip install -r requirements.txt`
+
 Go to: `cd core`
 
 Run server:  `python manage.py runserver`
