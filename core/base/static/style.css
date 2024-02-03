@@ -1,82 +1,118 @@
-nav{
-    padding: 10px;
-    font-weight: bold;
-    font-size: 25px;
-    margin-bottom: 30px;
-    /* position: fixed; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 a{
-    margin: 20px;
     text-decoration: none;
-    color: rgb(157, 51, 162);
-}
-
-.Icon{
-    font-size: 30px;
-    color: #7e22ce;
-    margin: 10px 470px 220px 20px ;
-}
-.para1{
-    margin: 20px;
-    color: blue;
-    font-size: 20px;
-    margin-left: 30px;
-}
-.quote{
-    margin: 20px;
-    font-size: 20px;
-    margin-left: 30px;
-}
-h2{
-    margin: 20px;
-    margin-left: 30px; 
-}
-.form{
-    padding: 0px 300px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-decoration: solid;
-    font-weight: 900;
 }
 .messages{
     color: red;
 }
+body {
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+header nav {
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(222, 206, 238);
+    padding: 10px;
+    height: 100px;
+}
+nav .logo {
+    font-size: 30px;
+    text-align: center;
+    
+    /* flex: 25%; */
 
-.heading {
-    padding: 5px 5px;
+    padding-left: 25px; /* add 1 */
+}
+nav .Icon{
+    color:rgb(82, 26, 99);
+}
+nav .navbar{
+    display: flex;
+    flex-direction: row;
+    border-color: blue;
+    
+    /* flex: 75%; */
+    /* padding-right: 50px; */
+    width: 40%; /*add 2 */
+}
+nav .navbar a{
+    color: rgb(101, 23, 211);
+    padding: 10px 10px 10px 10px;
+}
+nav .navbar a:hover{
+    background-color: #ddd;
+    color: black;
+}
+/* main{
+
+} */
+main .hd1 {
+    text-align: center;
+    margin: 20px 0 30px 0;
+    color: blue;
+}
+main .dt {
+    color:rgb(125, 67, 154);
+    margin-bottom: 20px;
+    text-align: center;
+}
+main .quote{
+    text-align: center;
+    margin: 5px 30px;
+    font-size: 20px;
+}
+main .form-container{
+    display: flex;
+    flex-direction: column;
+}
+main .form-container .heading {
     background-color: rgb(128, 81, 248);
-    width: auto;
     color: white;
-    line-height: 10%;
     text-align: center;
     border-radius: 5px;
     border: 1px solid black;
+    padding: 5px 5px;
+    line-height: 1.5em;
 }
-
-form {
+main .form-container .form{
+    display: flex;
+    justify-content: center;
+}
+main .form-container .form form {
     background-color: rgb(238, 239, 235);
     border-radius: 5px;
     border: 1px solid black;
     padding: 0px 80px 5px;
     font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: solid;
+    font-weight: 900;
 }
-
 input[type="submit"] {
     background-color: rgb(181, 74, 191);
-    font-size: larger;
+    /* font-size: larger; */
     color: white;
-    border-radius: 5px;
+    border-radius: 30px;
     border: none;
     cursor: pointer;
-    width: 75%;
+    padding: 10px;
+    /* width: 75%; */
 }
-
 input[type="reset"] {
     background-color: red;
-    font-size: larger;
+    /* font-size: larger; */
     color: white;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     border: none;
+    padding: 10px;
 }
 
 input[type="submit"]:hover {
@@ -87,7 +123,8 @@ input[type="reset"]:hover {
     background-color: rgb(191, 0, 0);
 }
 
-footer {
+
+footer{
     background-color: #483f54;
     color: white;
     padding: 1em;
@@ -95,17 +132,7 @@ footer {
     /* position: fixed; */
     bottom: 0;
     width: 100%;
-} 
-.mt-5{
-    margin-top: 20px;
-    margin-left: 20px;
 }
-.about {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 .container {
     max-width: 100%;
     margin: 0 auto;
@@ -129,35 +156,14 @@ th {
 }
 
 
-
-@media screen and (max-width: 768px) {
-    nav {
-        font-size: 18px;
+@media screen and (max-width: 480px){
+    header nav{
+        flex-direction: column;
+        align-items:unset;
+        padding: 10px 0px;
+        height: auto;
     }
-
-    .Icon {
-        margin: 10px 20px;
-    }
-
-    p {
-        margin-left: 10px;
-    }
-    .para1{
-        margin-left: 10px;
-    }
-    footer {
-        position: relative;
-    }
-    th, td {
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        display: inline-block;
-        width: 50%;
+    nav .navbar{
+        flex-direction: column;
     }
 }
