@@ -1,5 +1,7 @@
 # Django-Web-Forms-App
 To run this application perform this following tasks:
+
+  **MAke sure you are conected with internet**
   
   clone this repository: 
   ```
