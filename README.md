@@ -1,8 +1,8 @@
 # Django-Web-Forms-App
 To run this application perform this following tasks:
 
-  **MAke sure you are conected with internet**
-  
+  **Make sure you are conected with internet**
+
   clone this repository: 
   ```
   git clone https://github.com/soumalya70/Django-Web-Forms-App.git
